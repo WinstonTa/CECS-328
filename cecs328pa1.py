@@ -2,6 +2,9 @@
 
 import csv
 from collections import Counter
+import time
+
+start = time.time()
 
 def actor_movie_counts(last_watched_file, actors_file):
     # step 1
@@ -28,4 +31,8 @@ def actor_movie_counts(last_watched_file, actors_file):
         if count > 1:
             print(f"{actor}: {count}")
 
-actor_movie_counts("last_watched.csv", "actors.csv")
+actor_movie_counts("last_watched_10mil.csv", "actors_50.csv")
+
+end = time.time()
+
+print(f"Time: {end - start:.2f} seconds")
