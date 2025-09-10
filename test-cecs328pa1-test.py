@@ -2,8 +2,12 @@
 
 import csv
 from collections import Counter
+import time
+
+start = time.time()
 
 def actor_movie_counts(last_watched_file, actors_file):
+    # step 1
     movies_to_actors = {}
     with open(actors_file, newline='', encoding="utf-8") as file:
         data = csv.DictReader(file)
@@ -27,11 +31,8 @@ def actor_movie_counts(last_watched_file, actors_file):
         if count > 1:
             print(f"{actor}: {count}")
 
-while True:
-    print("actor_movie_counts('last_watched_file', 'actors_file')")
-    print("Begin by inputting the string that represents the 'last_watched_file' you want to test")
-    user_last_watched_file = input()
-    print("Finally input the string that represents the 'actors_file' you want to test")
-    user_actors_file = input()
-    actor_movie_counts(user_last_watched_file, user_actors_file)
-    break
+actor_movie_counts("last_watched_10mil.csv", "actors_50.csv")
+
+end = time.time()
+
+print(f"Time: {end - start:.2f} seconds")
