@@ -26,12 +26,3 @@ def actor_movie_counts(last_watched_file, actors_file):
     for actor, count in actor_counts.items():
         if count > 1:
             print(f"{actor}: {count}")
-
-while True:
-    print("actor_movie_counts('last_watched_file', 'actors_file')")
-    print("Begin by inputting the string that represents the 'last_watched_file' you want to test")
-    user_last_watched_file = input()
-    print("Finally input the string that represents the 'actors_file' you want to test")
-    user_actors_file = input()
-    actor_movie_counts(user_last_watched_file, user_actors_file)
-    break
