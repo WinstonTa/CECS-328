@@ -31,7 +31,7 @@ def actor_movie_counts(last_watched_file, actors_file):
         if count > 1:
             print(f"{actor}: {count}")
 
-actor_movie_counts("last_watched_10mil.csv", "actors_50.csv")
+actor_movie_counts("last_watched_gen_10m.csv", "actors_gen_50.csv")
 
 end = time.time()
 
