@@ -17,7 +17,6 @@ def same_asymptotic(left_function, right_function):
     # compare function runtimes with a limit
     ratio = sp.limit(f1_compare / f2_compare, n, oo)
 
-    print(ratio)
     same_runtime = True if ratio.is_finite and ratio != 0 else False
     
     return same_runtime
