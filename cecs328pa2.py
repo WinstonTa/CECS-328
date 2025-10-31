@@ -1,4 +1,4 @@
-# Winston Ta and Mindy Yun
+# Winston Ta  Mindy Yun
 
 from sympy import Symbol, log, limit, simplify, oo
 import sympy as sp
