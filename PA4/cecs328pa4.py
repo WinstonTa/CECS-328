@@ -1,9 +1,8 @@
 # Mindy Yun, Winston Ta
 
 # cecs328pa4.py
-from typing import List, Tuple
 
-def aircraft_max_revenue(cargo_pool: List[Tuple[int, int]], weight_capacity: int) -> int:
+def aircraft_max_revenue(cargo_pool: list[tuple[int, int]], weight_capacity: int) -> int:
     # ---------- Input validation ----------
     if not isinstance(cargo_pool, (list, tuple)):
         raise TypeError("cargo_pool must be a list or tuple of (weight:int, price:int) tuples.")
@@ -42,7 +41,7 @@ def aircraft_max_revenue(cargo_pool: List[Tuple[int, int]], weight_capacity: int
     # ---------- Core DP (1D knapsack) ----------
     # dp[c] will be the maximum revenue achievable with capacity exactly c (or up to c).
     cap = weight_capacity
-    dp: List[int] = [0] * (cap + 1)
+    dp: list[int] = [0] * (cap + 1)
 
     # Loop through each cargo item (weight, price)
     # For each item, update dp array from high->low to ensure each item is only used once.
